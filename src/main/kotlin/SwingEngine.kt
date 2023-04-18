@@ -63,7 +63,7 @@ class SwingEngine(GAME_NAME : String, private val width:Int, private val height:
         buffG.clearRect(0, 0, 854, 480) // 백지화
         entitys.forEach {
             entitys.forEach { target->
-                if (it!=target&&it is ImageEntity&&target is ImageEntity ){
+                if (it!=target&&it is ImageEntity&&target is ImageEntity){
                     val targetMaxX: Double = target.x + target.imagepng.getWidth(this)/2
                     val targetMinX: Double = target.x - target.imagepng.getWidth(this)/2
                     val targetMaxY: Double = target.y + target.imagepng.getHeight(this)/2
@@ -116,6 +116,7 @@ class SwingEngine(GAME_NAME : String, private val width:Int, private val height:
         entitys.add(entity)
         return entity
     }
+
 
 
     fun getEntity(name:String):Entity?{
