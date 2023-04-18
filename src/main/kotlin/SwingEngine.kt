@@ -74,9 +74,9 @@ class SwingEngine(GAME_NAME : String, private val width:Int, private val height:
                     val minY: Double = it.y - it.imagepng.getHeight(this)/2
                     if (targetMaxX >= minX && targetMinX <= maxX && targetMaxY >= minY && targetMinY <= maxY) {
                         handler.ColliderEvent(it, target)
-                        it.gr=0.0
+                        it.rigidBody.gr=0.0
                     } else {
-                        it.AddGravity()
+                        it.rigidBody.AddGravity()
                     }
 
                 }

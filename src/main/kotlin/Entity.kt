@@ -14,9 +14,7 @@ abstract class Entity(
     abstract var imagepng: Image
     abstract var height:Int
     abstract var width:Int
-    var gravity=10.0
-    var isGravity=false
-    var gr=0.0
+    val rigidBody=RigidBody(this)
 
     fun Movex(x: Int){
         this.x+=x
@@ -56,14 +54,7 @@ abstract class Entity(
     fun SetDir(dir:Int){
         direct=dir.toDouble()
     }
-    fun AddGravity(){
-        if (isGravity){
 
-            gr+=0.1
-
-            y+=gr*gravity
-        }
-    }
 
 
     open fun draw(g:Graphics,ig:ImageObserver){
