@@ -1,10 +1,9 @@
-import sun.swing.SwingUtilities2.getFontMetrics
 import java.awt.Color
 import java.awt.Font
 import java.awt.Graphics
 import java.awt.Image
 import java.awt.image.ImageObserver
-import java.awt.FontMetrics
+
 class TextEntity(name:String, x: Double, y: Double, direct: Double, private var text:String):Entity(name,x, y, direct) {
     override lateinit var imagepng: Image
 
